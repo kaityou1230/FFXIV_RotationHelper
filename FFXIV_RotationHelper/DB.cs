@@ -50,7 +50,7 @@ namespace FFXIV_RotationHelper
 
         private static async Task LoadAdjustTable()
         {
-            HttpWebRequest request = WebRequest.Create("https://raw.githubusercontent.com/Elysia-ff/FFXIV_RotationHelper-resources/master/Output/ActionTable.csv") as HttpWebRequest;
+            HttpWebRequest request = WebRequest.Create("https://raw.githubusercontent.com/kaityou1230/FFXIV_RotationHelper-resources/master/Output/ActionTable.csv") as HttpWebRequest;
             using (HttpWebResponse response = await Task.Factory.FromAsync(request.BeginGetResponse, request.EndGetResponse, null) as HttpWebResponse)
             using (StreamReader streamReader = new StreamReader(response.GetResponseStream()))
             {
@@ -99,7 +99,7 @@ namespace FFXIV_RotationHelper
             string dbUrl = string.Empty;
 
             { // Get DB url
-                HttpWebRequest request = WebRequest.Create("https://raw.githubusercontent.com/Elysia-ff/FFXIV_RotationHelper-resources/master/Output/dburl.txt") as HttpWebRequest;
+                HttpWebRequest request = WebRequest.Create("https://raw.githubusercontent.com/kaityou1230/FFXIV_RotationHelper-resources/master/Output/dburl.txt) as HttpWebRequest;
                 using (HttpWebResponse response = await Task.Factory.FromAsync(request.BeginGetResponse, request.EndGetResponse, null) as HttpWebResponse)
                 using (StreamReader streamReader = new StreamReader(response.GetResponseStream()))
                 {
